@@ -1,0 +1,488 @@
+/* Inicio Estilos genericos de html */
+.main-body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.container__wrapper {
+  max-width: 1200px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.line-bottom {
+  border-bottom: 1px solid #ccc;
+}
+/* Final Estilos genericos de html */
+
+/* Inicio clases reutilizadas entre objetos de diferentes sections */
+.form-buttons:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+.form-buttons {
+  background-color: #4a90e2;
+  color: #fff;
+  width: 2rem;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  min-width: 120px;
+}
+
+.form-buttons:hover {
+  background-color: #357abd;
+}
+/* Final clases reutilizadas entre objetos de diferentes sections */
+
+/* Inicio Estilos header */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin: 0 16px;
+}
+
+.header-container--options {
+  display: none;
+}
+
+.header-container--title {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+/* Inicio Estilos header */
+
+/* Inicio Producto Principal */
+.container-product {
+  display: flex;
+  flex-direction: column;
+  height: 25rem;
+  padding: 16px 16px 0;
+  gap: 20px;
+  height: auto;
+}
+
+.container-product-image {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+.container-product-image__image {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.container-product-image__spanGreen {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: green;
+  color: white;
+  padding: 5px 10px;
+  font-weight: bold;
+}
+
+.container-product__text {
+  flex-grow: 2;
+  width: 100%;
+  overflow: hidden;
+}
+
+.container-product__oferta {
+  color: red;
+  font-weight: bold;
+  margin: 0;
+}
+
+.container-product__title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+
+.container-product__text {
+  font-size: 0.9rem;
+}
+
+.container-product--buy {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.container-product--buy__price {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.container-product__tooltips {
+  display: flex;
+  /* Anotacion : Felix aunque el efecto es el deseado 2 tip en una row
+     y otro en otra, solo lo consigo que se mantenga entre 500px y 800px mayor
+     o menor se reajusta ya sea a row o column dependiendo si es menor de 500px o 
+     mayor de 800px. Relamente no se si es el efecto que se buscaba en la practica.
+  */
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-bottom: 1rem;
+}
+
+.container-product__tooltips--tip {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin: 0px;
+}
+
+.container-product__tooltips--image {
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.container-product__tooltips--text {
+  margin: 0;
+}
+/* Final Producto Principal */
+
+/* Inicio Estilos Accesorios recomendados */
+.section {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.recommended_accessories {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.recommended_accessories_container__title {
+  padding: 0 1rem;
+}
+
+.recommended_accessories__title {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.recommended_accessories_container__image {
+  padding: 10px;
+}
+
+.recommended_accessories__image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.product {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.product .content {
+  padding: 15px;
+}
+
+.product-content__title {
+  font-size: 1.5rem;
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.product-content__text {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+.product-span {
+  color: #fff;
+  font-size: 0.75em;
+  padding: 3px 8px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.product-span--oferta {
+  background-color: red;
+}
+
+.product-span--nuevo {
+  background-color: #4a90e2;
+}
+
+/* Final Estilos Accesorios recomendados */
+
+/* Inicio Estilos Formnulario */
+.form {
+  padding: 16px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  gap: 20px;
+  background-color: #ececec;
+  border-radius: 12px;
+}
+
+.form-text {
+  width: 100%;
+  flex-grow: 2;
+}
+
+.form-text__title {
+  width: 100%;
+  font-size: 2rem;
+}
+
+.form-text-parrafo {
+  padding-top: 16px;
+}
+
+.form-inputs {
+  max-width: 90%;
+  min-width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-inputs__label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-inputs__inputs {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  font-size: 1em;
+  transition: border-color 0.3s;
+}
+/* Final Estilos Formulario */
+
+/* Inicio Estilos footer */
+.footer-container {
+  text-align: center;
+  padding: 2rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+/* Final Estilos footer */
+
+@media (min-width: 768px) {
+  .header-container--options {
+    display: block;
+  }
+
+  /* Inicio Estilos header */
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header-container--options__list {
+    list-style: none;
+    display: flex;
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .option {
+    text-decoration: none;
+    color: black;
+    padding: 0.25rem 0;
+    display: inline-block;
+  }
+
+  .btn-contactar {
+    text-decoration: none;
+    color: black;
+    border: 1px solid #ccc;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.375rem;
+    background-color: white;
+    display: inline-block;
+  }
+
+  .btn-contactar:hover {
+    background-color: #f0f0f0;
+  }
+  /* Final Estilos header */
+
+  /* Inicio Estilos Producto principal */
+  .container-product {
+    display: flex;
+    flex-direction: row;
+    height: 25rem;
+    padding: 16px 16px 0;
+    gap: 20px;
+  }
+
+  .container-product-image {
+    width: 50%;
+    position: relative;
+    flex-grow: 1;
+  }
+
+  .container-product-image__image {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  .container-product-image__spanGreen {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: green;
+    color: white;
+    padding: 5px 10px;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .container-product__text {
+    flex-grow: 2;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .container-product__oferta {
+    color: red;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .container-product__title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-block-end: 0;
+    margin-block-start: 0;
+  }
+
+  .container-product--buy {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .container-product--buy__price {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .container-product__tooltips {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .container-product__tooltips--tip {
+    flex: 1;
+    display: flex;
+    gap: 1rem;
+    margin: 0px;
+  }
+
+  .container-product__tooltips--image {
+    width: 1.5rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+  }
+  /* Final Estilos Producto principal */
+
+  /* Inicio Estilos Accesorios recomendados */
+  .recommended_accessories {
+    flex-direction: row;
+  }
+
+  .recommended_accessories__image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  /* Final Estilos Accesorios recomendados */
+
+  /* Inicio Estilos Formnulario */
+  .form {
+    padding: 16px;
+  }
+
+  .form-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .form-text {
+    width: 100px;
+    flex-grow: 2;
+  }
+
+  .form-text__title {
+    font-size: 2rem;
+  }
+
+  .form-text-parrafo {
+    padding-top: 16px;
+  }
+
+  .form-inputs {
+    padding: 20px 25px;
+    max-width: 40%;
+    min-width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  /* Final Estilos Formulario */
+}
+
+/* Anotacion : Felix, he diseñado teniendo en cuenta firstMobile, pero a 372px, ahora leyendo veo que hay iphones que llegan a 320px 
+   para no volver a retocar el CSS, añado esta mediaQuery para reducir los paddings, asi se visualiza correctamente en pantallas de 320px.*/
+@media (max-width: 372px) {
+  .container__wrapper {
+    margin: 0;
+    padding: 0;
+  }
+  .section {
+    padding: 0;
+  }
+}
